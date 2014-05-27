@@ -1,0 +1,15 @@
+<%content_for :link do %><li class="name"><%= link_to 'ver notas'%></li><% end %>
+
+<% content_for :title do %>Bienvenido <% end %>
+
+
+<div>	<h4>Consultar notas</h4>
+
+	<div class="form"> 
+		 <%= simple_form_for @estudiante do |f|  %>	
+			<%= f.input :cedula %>
+			<%= f.button :button, "ver notas", :class => "enviar", :action => 'create' %>
+		<% end %>	
+	</div>
+</div>
+

@@ -1,0 +1,25 @@
+<div>
+	<h3>Notas</h3>
+<center><table>
+<tr background: "#a6bedd">
+	<td>Nombre</td>
+	<td>Apellido</td>
+	<td>Cedula</td>
+	<td>Examen 1</td>
+	<td>Examen 2 </td>
+	<td>Examen 3 </td>
+</tr>
+	 <% @notas.each do |nomb, ap, ced, ex1, ex2, ex3| %>
+	 <tr>
+		<td><%= nomb %></td>
+		<td><%= ap %></td>
+		<td><%= ced %></td>
+		<td><%= ex1 %></td>
+		<td><%= ex2 %></td>
+		<td><%= ex3 %></td>
+	</tr>
+	<% end %>	
+	
+</table></center>
+
+</div>

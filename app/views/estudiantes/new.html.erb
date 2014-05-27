@@ -1,0 +1,29 @@
+<%content_for :link do %>
+	<ul class="title-area"><li class="name"><%= link_to 'Cerrar sesion', :controller => "logins", :action => "logout" %></li> </ul>
+<% end %>
+
+<% content_for :title do %>Bienvenido <% end %>
+
+
+<div>
+	<center><h3>Bienvenido <%= session[:nombre] %></h3>	</center>
+
+	<div class="form">
+		<h5>Aqui puede ver sus notas</h5>
+	 	<%= simple_form_for @estudiante, :url => url_for(:action => 'verNotas') do |f|  %>
+		<%= f.button :button, "Notas", :class => "enviar" %>	
+	 	<% end %>
+ 	</div>
+
+ 	<div class="form">
+ 		<h5>Unase a la lista de correo de esta materia</h5>
+		<%= simple_form_for @estudiante, :url => url_for(:action => 'suscribirse') do |f| %>
+		<%= f.error_notification %>
+		<%= f.input :email, label: false, :placeholder => "Tu dirección de correo..." %> 
+		<%= f.button :button, "Subscribirse", :class => "enviar" %>
+		<% end %>
+	</div>
+
+
+
+</div>

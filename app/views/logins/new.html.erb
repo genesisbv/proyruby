@@ -1,0 +1,15 @@
+<% content_for :title do %>Proyecto<% end %>
+
+
+<center><h2>PITAGORAS</h2></center>
+<center><h3>Login</h3></center>
+<div class="form" >
+<%= simple_form_for @login do |f| %>
+<%= f.input :usuario, label: false, :placeholder => "usuario" %> 
+<%= f.input :contrasena,label: false, :placeholder => "contrasena"  %> 
+<%= f.button :button, "Entrar", :class => "enviar" %>
+<% end %>
+
+
+
+</div> 

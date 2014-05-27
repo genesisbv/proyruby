@@ -1,0 +1,142 @@
+// import the CSS framework
+@import "foundation";
+
+h4{
+  text-align: center;
+  margin-top: 2em;
+}
+
+// override for the 'Home' navigation link
+.top-bar {
+  font-size: rem-calc(13);
+  line-height: 45px; 
+  background: #06063E;
+  box-shadow: 5px 5px 5px;
+  }
+
+.top-bar .name {
+  font-size: rem-calc(13);
+  line-height: 45px; 
+  background: #06063E;
+  }
+
+.top-bar .a {
+  font-size: rem-calc(13);
+  line-height: 45px; 
+  background: #06063E;
+  }
+.top-bar .name a {
+  font-weight: normal;
+  background: #06063E;
+  color: #FFF;
+  padding: 0 15px; }
+
+
+   
+
+// THESE ARE EXAMPLES YOU CAN MODIFY
+// create mixins using Foundation classes
+@mixin twelve-columns {
+  @extend .small-12;
+  @extend .columns;
+  }
+@mixin six-columns-centered {
+  @extend .small-6;
+  @extend .columns;
+  @extend .text-center;
+  }
+// create your own classes
+// to make views framework-neutral
+
+.column {
+  @include six-columns-centered;
+}
+
+.form{
+  width: 50%;
+  margin-left: 25%;
+   margin-top: 10%;
+ margin-bottom: 10%;
+  }
+
+.form-centered {
+
+  @include six-columns-centered;
+  }
+.submit {
+  @extend .button;
+  @extend .radius;
+  }
+// apply styles to HTML elements
+// to make views framework-neutral
+main {
+  @include twelve-columns;
+  background-color: #eee;
+  width: 70%;
+  margin-left: 10%;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  box-shadow: 5px 5px 5px #808080;
+
+  }
+section {
+  @extend .row;
+  margin-top: 20px;
+  background: #eee;
+  }
+
+.enviar {
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #4197ee) );
+  background:-moz-linear-gradient( center top, #79bbff 5%, #4197ee 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#4197ee');
+  background-color:#79bbff;
+  -webkit-border-top-left-radius:9px;
+  -moz-border-radius-topleft:9px;
+  border-top-left-radius:9px;
+  -webkit-border-top-right-radius:9px;
+  -moz-border-radius-topright:9px;
+  border-top-right-radius:9px;
+  -webkit-border-bottom-right-radius:9px;
+  -moz-border-radius-bottomright:9px;
+  border-bottom-right-radius:9px;
+  -webkit-border-bottom-left-radius:9px;
+  -moz-border-radius-bottomleft:9px;
+  border-bottom-left-radius:9px;
+  
+  display:inline-block;
+  color:#ffffff;
+  height:30px;
+  line-height:4px;
+  width:131px;
+  text-align:center;
+}
+
+.enviar:hover {
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #4197ee), color-stop(1, #79bbff) );
+  background:-moz-linear-gradient( center top, #4197ee 5%, #79bbff 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#4197ee', endColorstr='#79bbff');
+  background-color:#4197ee;
+}
+
+.enviar:active {
+  position:relative;
+  top:1px;
+  }
+
+#footer{
+  position: relative; margin-top: -50px; 
+   height: 30px; 
+  clear: both;
+   background: #B9BEC9; 
+  text-align: center; 
+  color: #FFF ;
+  font-size: 90%;
+  margin-top: 5px;
+  box-shadow: 5px 5px 5px #808080;
+}  
+
+table{
+  margin-top: 8%;
+  margin-bottom: 10%;
+  text-align: center;
+}
